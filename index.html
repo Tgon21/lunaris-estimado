@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estimado de Costos Tecnológicos — Oficina Pequeña (PR)</title>
+<meta name="description" content="Estimado bilingüe (ES/EN) de costos tecnológicos para una oficina médica de 3 estaciones en Puerto Rico: equipo, red, internet, teléfonos VoIP, Microsoft 365, dominio y portal.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230e7c7b'/><text x='16' y='22' font-size='15' font-weight='bold' font-family='system-ui' fill='%23fff' text-anchor='middle'>$</text></svg>">
+<style>
+  :root {
+    --paper: #f7f9fa;
+    --card: #ffffff;
+    --ink: #17262e;
+    --muted: #5b6d78;
+    --line: #dde5e9;
+    --accent: #0e7c7b;
+    --accent-soft: #e3f1f0;
+    --tint: #eef4f3;
+    --warn: #8a6d1f;
+    --warn-soft: #f6efd8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #101a1f;
+      --card: #17242b;
+      --ink: #e8eef1;
+      --muted: #93a6b0;
+      --line: #26363f;
+      --accent: #3db8b0;
+      --accent-soft: #14312f;
+      --tint: #1a2c2d;
+      --warn: #d9b45a;
+      --warn-soft: #2e2817;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #101a1f;
+    --card: #17242b;
+    --ink: #e8eef1;
+    --muted: #93a6b0;
+    --line: #26363f;
+    --accent: #3db8b0;
+    --accent-soft: #14312f;
+    --tint: #1a2c2d;
+    --warn: #d9b45a;
+    --warn-soft: #2e2817;
+  }
+  :root[data-theme="light"] {
+    --paper: #f7f9fa;
+    --card: #ffffff;
+    --ink: #17262e;
+    --muted: #5b6d78;
+    --line: #dde5e9;
+    --accent: #0e7c7b;
+    --accent-soft: #e3f1f0;
+    --tint: #eef4f3;
+    --warn: #8a6d1f;
+    --warn-soft: #f6efd8;
+  }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.55;
+    padding: 3rem 1.25rem 5rem;
+  }
+  .doc { max-width: 880px; margin: 0 auto; }
+
+  .lang-bar { display: flex; justify-content: flex-end; margin-bottom: 1.2rem; }
+  .lang-toggle {
+    font: inherit;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .04em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+    border-radius: 99px;
+    padding: .45rem 1rem;
+    cursor: pointer;
+  }
+  .lang-toggle:hover { filter: brightness(1.05); }
+  .lang-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* language switching: hide only the inactive language */
+  :root[data-lang="en"] [lang="es"] { display: none !important; }
+  :root[data-lang="es"] [lang="en"] { display: none !important; }
+  /* before JS sets data-lang, default to Spanish visible */
+  :root:not([data-lang]) [lang="en"] { display: none !important; }
+
+  .eyebrow {
+    font-size: .72rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: .6rem;
+  }
+  h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: -.015em;
+    text-wrap: balance;
+    margin-bottom: .35rem;
+  }
+  .subtitle { color: var(--muted); max-width: 62ch; margin-bottom: 2.2rem; }
+
+  .totals {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2.6rem;
+  }
+  .tile {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.1rem 1.25rem 1rem;
+  }
+  .tile.lead { border-color: var(--accent); background: var(--accent-soft); }
+  .tile .label {
+    font-size: .7rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .tile .amount {
+    font-size: 1.55rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    margin-top: .25rem;
+    letter-spacing: -.01em;
+  }
+  .tile .note { font-size: .8rem; color: var(--muted); margin-top: .15rem; }
+
+  section { margin-bottom: 2.4rem; }
+  h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    margin-bottom: .2rem;
+  }
+  .section-note { font-size: .85rem; color: var(--muted); margin-bottom: .9rem; }
+
+  .table-wrap {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow-x: auto;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: .92rem; min-width: 560px; }
+  th {
+    text-align: left;
+    font-size: .7rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    padding: .75rem 1rem .55rem;
+    border-bottom: 1px solid var(--line);
+  }
+  td {
+    padding: .65rem 1rem;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  td.num, th.num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  td .detail { display: block; font-size: .8rem; color: var(--muted); margin-top: .1rem; white-space: normal; }
+  tr.subtotal td {
+    background: var(--tint);
+    font-weight: 700;
+    border-top: 1px solid var(--line);
+  }
+  .item-name { font-weight: 600; }
+
+  .pill {
+    display: inline-block;
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: .1rem .5rem;
+    border-radius: 99px;
+    background: var(--warn-soft);
+    color: var(--warn);
+    margin-left: .4rem;
+    white-space: nowrap;
+  }
+
+  .callout {
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    font-size: .9rem;
+    margin-top: 1rem;
+  }
+  .callout strong { color: var(--accent); }
+
+  ul.notes { padding-left: 1.1rem; font-size: .88rem; color: var(--muted); display: grid; gap: .45rem; }
+  ul.notes li::marker { color: var(--accent); }
+  ul.notes strong { color: var(--ink); }
+
+  footer { margin-top: 3rem; font-size: .78rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 1rem; }
+</style>
+</head>
+<body>
+
+<div class="doc">
+  <div class="lang-bar">
+    <button type="button" class="lang-toggle" id="langBtn"><span lang="en">Español</span><span lang="es">English</span></button>
+  </div>
+
+  <div class="eyebrow"><span lang="en">Startup Cost Estimate · Draft</span><span lang="es">Estimado de costos iniciales · Borrador</span></div>
+  <h1 lang="en">Small Office Technology Buildout — Puerto Rico</h1>
+  <h1 lang="es">Infraestructura tecnológica para oficina pequeña — Puerto Rico</h1>
+  <p class="subtitle" lang="en">Planning estimate for a 3-workstation office: computers and peripherals, UniFi networking, business internet with a static IP, a cloud phone system, Microsoft 365 email with Entra conditional access, a Cloudflare domain, and a placeholder for the doctors portal.</p>
+  <p class="subtitle" lang="es">Estimado de planificación para una oficina de 3 estaciones de trabajo: computadoras y periferales, red UniFi, internet comercial con IP fija, sistema de teléfono en la nube, correo de Microsoft 365 con acceso condicional de Entra, un dominio en Cloudflare y una partida reservada para el portal médico.</p>
+
+  <div class="totals">
+    <div class="tile lead">
+      <div class="label"><span lang="en">One-time hardware</span><span lang="es">Equipo (pago único)</span></div>
+      <div class="amount">$2,900 – $4,350</div>
+      <div class="note"><span lang="en">Computers, network gear, peripherals; low end skips desk phones</span><span lang="es">Computadoras, equipo de red, periferales; el mínimo omite teléfonos de escritorio</span></div>
+    </div>
+    <div class="tile">
+      <div class="label"><span lang="en">Monthly recurring</span><span lang="es">Mensual recurrente</span></div>
+      <div class="amount">$195 – $335</div>
+      <div class="note"><span lang="en">Internet, phones, licenses, web server — portal not included</span><span lang="es">Internet, teléfonos, licencias, servidor web — portal no incluido</span></div>
+    </div>
+    <div class="tile">
+      <div class="label"><span lang="en">Annual</span><span lang="es">Anual</span></div>
+      <div class="amount">~$12 / <span lang="en">yr</span><span lang="es">año</span></div>
+      <div class="note"><span lang="en">Domain registration (Cloudflare)</span><span lang="es">Registro de dominio (Cloudflare)</span></div>
+    </div>
+  </div>
+
+  <section>
+    <h2><span lang="en">One-time: Hardware &amp; Setup</span><span lang="es">Pago único: Equipo e instalación</span></h2>
+    <p class="section-note" lang="en">Business-class equipment, priced mid-range. UniFi keeps the network gear affordable and manageable from one dashboard.</p>
+    <p class="section-note" lang="es">Equipo de clase comercial, en precios de gama media. UniFi mantiene la red económica y manejable desde un solo panel.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th><span lang="en">Item</span><span lang="es">Artículo</span></th><th class="num"><span lang="en">Qty</span><span lang="es">Cant.</span></th><th class="num"><span lang="en">Unit est.</span><span lang="es">Est. unitario</span></th><th class="num"><span lang="en">Line est.</span><span lang="es">Est. total</span></th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="item-name"><span lang="en">Desktop computers</span><span lang="es">Computadoras de escritorio</span></span><span class="detail" lang="en">Business-class SFF (Dell OptiPlex / Lenovo ThinkCentre class), Win 11 Pro</span><span class="detail" lang="es">SFF de clase comercial (tipo Dell OptiPlex / Lenovo ThinkCentre), Win 11 Pro</span></td>
+            <td class="num">3</td><td class="num">$650 – $850</td><td class="num">$1,950 – $2,550</td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Monitors</span><span lang="es">Monitores</span></span><span class="detail" lang="en">24″ 1080p, one per computer</span><span class="detail" lang="es">24″ 1080p, uno por computadora</span></td>
+            <td class="num">3</td><td class="num">$120 – $160</td><td class="num">$360 – $480</td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Keyboard + mouse combos</span><span lang="es">Combos de teclado y ratón</span></span><span class="detail" lang="en">Wired or wireless combo sets</span><span class="detail" lang="es">Juegos alámbricos o inalámbricos</span></td>
+            <td class="num">3</td><td class="num">$30 – $50</td><td class="num">$90 – $150</td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Router / gateway with switch ports</span><span lang="es">Router / gateway con puertos de switch</span></span><span class="detail" lang="en">UniFi Cloud Gateway Ultra — routing, firewall, and 4 built-in switch ports in one box</span><span class="detail" lang="es">UniFi Cloud Gateway Ultra — enrutamiento, firewall y 4 puertos de switch en un solo equipo</span></td>
+            <td class="num">1</td><td class="num">~$130</td><td class="num">~$130</td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">UniFi access points</span><span lang="es">Puntos de acceso UniFi</span></span><span class="detail" lang="en">U6+ or U7 Lite, ceiling/wall mount</span><span class="detail" lang="es">U6+ o U7 Lite, montaje en techo o pared</span></td>
+            <td class="num">2 – 3</td><td class="num">$100 – $130</td><td class="num">$200 – $390</td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">PoE injectors for APs</span><span lang="es">Inyectores PoE para los AP</span></span><span class="detail" lang="en">APs need PoE; the Gateway Ultra ports are not powered</span><span class="detail" lang="es">Los AP requieren PoE; los puertos del Gateway Ultra no suplen energía</span></td>
+            <td class="num">2 – 3</td><td class="num">~$20</td><td class="num">$40 – $60</td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">VoIP desk phones</span><span lang="es">Teléfonos de escritorio VoIP</span> <span class="pill"><span lang="en">Optional</span><span lang="es">Opcional</span></span></span><span class="detail" lang="en">Yealink T3x / Poly Edge class, one per desk. Skip entirely with a softphone-only setup — the phone system's app runs on the desktops and staff cell phones instead</span><span class="detail" lang="es">Clase Yealink T3x / Poly Edge, uno por escritorio. Se pueden omitir por completo con softphones — la app del sistema telefónico corre en las computadoras y celulares del personal</span></td>
+            <td class="num">3</td><td class="num">$80 – $150</td><td class="num">$240 – $450 <span class="detail" lang="en">$0 if softphone-only</span><span class="detail" lang="es">$0 si es solo softphone</span></td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Cabling &amp; misc.</span><span lang="es">Cableado y misceláneos</span></span><span class="detail" lang="en">Ethernet runs, surge protectors, mounts</span><span class="detail" lang="es">Tendido de Ethernet, protectores de voltaje, monturas</span></td>
+            <td class="num">—</td><td class="num">—</td><td class="num">$75 – $150</td>
+          </tr>
+          <tr class="subtotal">
+            <td><span lang="en">Hardware subtotal</span><span lang="es">Subtotal de equipo</span><span class="detail" style="font-weight:400"><span lang="en">Low end assumes the softphone-only route with no desk phones</span><span lang="es">El mínimo asume la ruta de solo softphone, sin teléfonos de escritorio</span></span></td><td class="num"></td><td class="num"></td><td class="num">$2,900 – $4,350</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2><span lang="en">Monthly Recurring</span><span lang="es">Mensual recurrente</span></h2>
+    <p class="section-note" lang="en">Priced for 3–5 users. Puerto Rico ISP figures are general estimates — actual pricing depends on the address and available providers (Liberty Business is the most common).</p>
+    <p class="section-note" lang="es">Calculado para 3–5 usuarios. Las cifras de internet en Puerto Rico son estimados generales — el precio real depende de la dirección y los proveedores disponibles (Liberty Business es el más común).</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th><span lang="en">Item</span><span lang="es">Artículo</span></th><th class="num"><span lang="en">Qty</span><span lang="es">Cant.</span></th><th class="num"><span lang="en">Unit est.</span><span lang="es">Est. unitario</span></th><th class="num"><span lang="en">Line est. / mo</span><span lang="es">Est. / mes</span></th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="item-name"><span lang="en">Business internet (PR)</span><span lang="es">Internet comercial (PR)</span></span><span class="detail" lang="en">Business-tier fiber/cable, e.g. Liberty Business</span><span class="detail" lang="es">Fibra/cable de nivel comercial, p. ej. Liberty Business</span></td>
+            <td class="num">1</td><td class="num">$100 – $150</td><td class="num">$100 – $150</td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Static IP add-on</span><span lang="es">IP fija (adicional)</span></span><span class="detail" lang="en">Single static IPv4 on the business plan</span><span class="detail" lang="es">Una IPv4 fija sobre el plan comercial</span></td>
+            <td class="num">1</td><td class="num">$15 – $30</td><td class="num">$15 – $30</td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Cloud phone system (VoIP)</span><span lang="es">Sistema de teléfono en la nube (VoIP)</span></span><span class="detail" lang="en">Hosted service with a main practice number, auto-attendant, call routing, and voicemail-to-email — Zoom Phone, RingCentral, or Google Voice (Workspace) class. The simple online-only route: number + apps, no phone hardware at all</span><span class="detail" lang="es">Servicio hospedado con número principal, contestadora automática, enrutamiento de llamadas y buzón de voz al correo — clase Zoom Phone, RingCentral o Google Voice (Workspace). La ruta simple, solo en línea: número + apps, sin equipo telefónico</span></td>
+            <td class="num"><span lang="en">3 lines</span><span lang="es">3 líneas</span></td><td class="num">$10 – $20</td><td class="num">$30 – $60</td>
+          </tr>
+          <tr>
+            <td><span class="item-name">Microsoft 365 Business Basic</span><span class="detail" lang="en">Outlook mailbox, Teams, OneDrive, web Office — per user</span><span class="detail" lang="es">Buzón de Outlook, Teams, OneDrive, Office web — por usuario</span></td>
+            <td class="num">3 – 5</td><td class="num">$6</td><td class="num">$18 – $30</td>
+          </tr>
+          <tr>
+            <td><span class="item-name">Microsoft Entra ID P1</span><span class="detail" lang="en">Conditional access — per user</span><span class="detail" lang="es">Acceso condicional — por usuario</span></td>
+            <td class="num">3 – 5</td><td class="num">$6</td><td class="num">$18 – $30</td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Hetzner cloud server (website)</span><span lang="es">Servidor en la nube Hetzner (sitio web)</span> <span class="pill"><span lang="en">Deferred</span><span lang="es">Diferido</span></span></span><span class="detail" lang="en">Small Hetzner Cloud instance (CX22/CX32 class) is plenty for a practice website — running on an existing dummy server for now, so $0 until launch</span><span class="detail" lang="es">Una instancia pequeña de Hetzner Cloud (clase CX22/CX32) sobra para el sitio de la práctica — por ahora corre en un servidor provisional existente, así que $0 hasta el lanzamiento</span></td>
+            <td class="num">1</td><td class="num">$5 – $15</td><td class="num">$5 – $15 <span class="detail" lang="en">$0 for now</span><span class="detail" lang="es">$0 por ahora</span></td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Doctors portal</span><span lang="es">Portal médico</span> <span class="pill"><span lang="en">TBD</span><span lang="es">Por definir</span></span></span><span class="detail" lang="en">Placeholder until scope is decided — hosted portal services commonly run $50 – $300/mo; a custom build would be a one-time project cost instead</span><span class="detail" lang="es">Partida reservada hasta definir el alcance — los portales hospedados suelen costar $50 – $300/mes; un desarrollo a la medida sería un costo único de proyecto</span></td>
+            <td class="num">1</td><td class="num"><span lang="en">TBD</span><span lang="es">Por definir</span></td><td class="num"><span lang="en">not included</span><span lang="es">no incluido</span></td>
+          </tr>
+          <tr class="subtotal">
+            <td><span lang="en">Monthly subtotal (without portal)</span><span lang="es">Subtotal mensual (sin el portal)</span></td><td class="num"></td><td class="num"></td><td class="num">$195 – $335</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <span lang="en"><strong>Licensing tip:</strong> Microsoft 365 Business Premium ($22/user/mo) already includes Entra ID P1, plus desktop Office apps, Intune device management, and Defender. At 3–5 users that's $66 – $110/mo versus $36 – $60/mo for Basic + P1 — worth the jump if she wants device management and the full Office apps, especially for a medical practice.</span>
+      <span lang="es"><strong>Consejo de licencias:</strong> Microsoft 365 Business Premium ($22/usuario/mes) ya incluye Entra ID P1, más las apps de Office de escritorio, administración de equipos con Intune y Defender. Con 3–5 usuarios son $66 – $110/mes contra $36 – $60/mes de Basic + P1 — vale la pena el salto si ella quiere administración de equipos y el Office completo, sobre todo en una práctica médica.</span>
+    </div>
+  </section>
+
+  <section>
+    <h2><span lang="en">Annual</span><span lang="es">Anual</span></h2>
+    <div class="table-wrap">
+      <table style="min-width:0">
+        <thead>
+          <tr><th><span lang="en">Item</span><span lang="es">Artículo</span></th><th class="num"><span lang="en">Est. / yr</span><span lang="es">Est. / año</span></th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="item-name"><span lang="en">Domain registration</span><span lang="es">Registro de dominio</span></span><span class="detail" lang="en">Single domain via Cloudflare Registrar (at-cost pricing); DNS and proxy on the free plan</span><span class="detail" lang="es">Un dominio vía Cloudflare Registrar (precio al costo); DNS y proxy en el plan gratuito</span></td>
+            <td class="num">$10 – $15</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2><span lang="en">Assumptions &amp; Notes</span><span lang="es">Supuestos y notas</span></h2>
+    <ul class="notes" lang="en">
+      <li><strong>Year-one ballpark:</strong> roughly <strong>$5,200 – $8,400</strong> all-in (hardware plus 12 months of internet, phones, licenses, and web server), before the portal.</li>
+      <li><strong>Phones — two ways to go.</strong> The simple online route is a cloud phone service alone (~$30 – $60/mo for 3 lines): the practice number rings apps on the desktops and staff cell phones, with an auto-attendant and voicemail-to-email, and no phone hardware to buy. Add the desk phones later only if the front desk wants a physical handset — they plug into the same service.</li>
+      <li><strong>Phone vendor &amp; HIPAA:</strong> if voicemail or text messages may contain patient details, pick a phone vendor that will sign a BAA — Zoom Phone and RingCentral offer one; Google Voice is covered only under a Google Workspace agreement. Also register the office address for E911, which VoIP requires.</li>
+      <li><strong>Website hosting:</strong> a small Hetzner Cloud instance ($5–15/mo) is deferred for now since the site runs on an existing dummy server — the line just reserves the budget for when it moves to its own box.</li>
+      <li><strong>Doctors portal is the big unknown.</strong> A hosted/subscription portal adds monthly cost; a custom-built one is typically a one-time project in the low thousands and up. Firm this line up once she decides what it needs to do.</li>
+      <li><strong>If patient health data is involved</strong>, the portal and email setup will need to be HIPAA-eligible (Microsoft 365 supports a BAA; the portal vendor must too). That can affect vendor choice more than price.</li>
+      <li><strong>UniFi note:</strong> the Cloud Gateway Ultra's 4 switch ports cover 3 desktops + uplink. If APs — or PoE desk phones — are wired to it too, either use the PoE injectors listed or swap in a small UniFi PoE switch (~$110) and drop the injectors.</li>
+      <li>Prices are general US-market estimates before tax/shipping; PR availability may shift hardware prices slightly upward.</li>
+    </ul>
+    <ul class="notes" lang="es">
+      <li><strong>Estimado del primer año:</strong> aproximadamente <strong>$5,200 – $8,400</strong> en total (equipo más 12 meses de internet, teléfonos, licencias y servidor web), sin contar el portal.</li>
+      <li><strong>Teléfonos — dos rutas.</strong> La ruta simple en línea es solo el servicio de teléfono en la nube (~$30 – $60/mes por 3 líneas): el número de la práctica suena en apps en las computadoras y en los celulares del personal, con contestadora automática y buzón de voz al correo, sin comprar equipo telefónico. Los teléfonos de escritorio se añaden después solo si recepción quiere un auricular físico — se conectan al mismo servicio.</li>
+      <li><strong>Proveedor de teléfono y HIPAA:</strong> si el buzón de voz o los mensajes de texto pueden contener información de pacientes, elija un proveedor que firme un BAA — Zoom Phone y RingCentral lo ofrecen; Google Voice solo queda cubierto bajo un acuerdo de Google Workspace. También hay que registrar la dirección de la oficina para E911, requisito de VoIP.</li>
+      <li><strong>Hosting del sitio web:</strong> la instancia pequeña de Hetzner Cloud ($5–15/mes) queda diferida por ahora porque el sitio corre en un servidor provisional — la línea solo reserva el presupuesto para cuando pase a su propio servidor.</li>
+      <li><strong>El portal médico es la gran incógnita.</strong> Un portal por suscripción añade costo mensual; uno a la medida suele ser un proyecto de costo único desde unos pocos miles en adelante. Esta línea se afina cuando ella decida qué debe hacer.</li>
+      <li><strong>Si hay datos de salud de pacientes</strong>, el portal y el correo deben ser elegibles para HIPAA (Microsoft 365 acepta un BAA; el proveedor del portal también debe hacerlo). Eso puede pesar más en la selección del proveedor que el precio.</li>
+      <li><strong>Nota de UniFi:</strong> los 4 puertos del Cloud Gateway Ultra cubren 3 computadoras + el enlace. Si los AP — o teléfonos PoE — también se cablean a él, use los inyectores PoE listados o cambie a un switch UniFi PoE pequeño (~$110) y elimine los inyectores.</li>
+      <li>Los precios son estimados generales del mercado de EE. UU., antes de impuestos y envío; la disponibilidad en PR puede subirlos levemente.</li>
+    </ul>
+  </section>
+
+  <footer><span lang="en">Draft planning estimate — July 28, 2026 · Prices are ballpark figures for budgeting, not vendor quotes.</span><span lang="es">Estimado preliminar de planificación — 28 de julio de 2026 · Los precios son cifras aproximadas para presupuestar, no cotizaciones de proveedores.</span></footer>
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById('langBtn');
+  function get() {
+    try { return localStorage.getItem('lunarisEstimateLang'); } catch (e) { return null; }
+  }
+  function set(l) {
+    root.setAttribute('data-lang', l);
+    btn.setAttribute('aria-label', l === 'en' ? 'Cambiar a español' : 'Switch to English');
+    try { localStorage.setItem('lunarisEstimateLang', l); } catch (e) {}
+  }
+  set(get() === 'en' ? 'en' : 'es');
+  btn.addEventListener('click', function () {
+    set(root.getAttribute('data-lang') === 'en' ? 'es' : 'en');
+  });
+})();
+</script>
+
+</body>
+</html>
