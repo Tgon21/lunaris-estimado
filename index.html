@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Estimado de Costos Tecnológicos — Oficina Pequeña (PR)</title>
-<meta name="description" content="Estimado bilingüe (ES/EN) de costos tecnológicos para una oficina médica de 5 estaciones en Puerto Rico: equipo, red, internet, teléfonos VoIP, Microsoft 365, dominio y portal.">
+<meta name="description" content="Estimado bilingüe (ES/EN) de costos tecnológicos para una oficina médica de 5 estaciones en Puerto Rico: equipo, red, internet, teléfonos VoIP, Microsoft 365, dominio y Healthie EHR.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%234a3566'/><text x='16' y='22' font-size='15' font-weight='bold' font-family='system-ui' fill='%23fff' text-anchor='middle'>$</text></svg>">
 <style>
@@ -185,8 +185,8 @@
   <div class="eyebrow"><span lang="en">Startup Cost Estimate · Draft</span><span lang="es">Estimado de costos iniciales · Borrador</span></div>
   <h1 lang="en">Small Office Technology Buildout — Puerto Rico</h1>
   <h1 lang="es">Infraestructura tecnológica para oficina pequeña — Puerto Rico</h1>
-  <p class="subtitle" lang="en">Planning estimate for a 5-workstation office: computers and peripherals, UniFi networking, business internet with a static IP, a cloud phone system, Microsoft 365 email with Entra conditional access, a Cloudflare domain, and a placeholder for the doctors portal.</p>
-  <p class="subtitle" lang="es">Estimado de planificación para una oficina de 5 estaciones de trabajo: computadoras y periferales, red UniFi, internet comercial con IP fija, sistema de teléfono en la nube, correo de Microsoft 365 con acceso condicional de Entra, un dominio en Cloudflare y una partida reservada para el portal médico.</p>
+  <p class="subtitle" lang="en">Planning estimate for a 5-workstation office: computers and peripherals, UniFi networking, business internet with a static IP, a cloud phone system, Microsoft 365 email with Entra conditional access, a Cloudflare domain, and Healthie EHR (EHR + client portal).</p>
+  <p class="subtitle" lang="es">Estimado de planificación para una oficina de 5 estaciones de trabajo: computadoras y periferales, red UniFi, internet comercial con IP fija, sistema de teléfono en la nube, correo de Microsoft 365 con acceso condicional de Entra, un dominio en Cloudflare y Healthie EHR (EHR + portal del paciente).</p>
 
   <div class="totals">
     <div class="tile lead">
@@ -196,8 +196,8 @@
     </div>
     <div class="tile">
       <div class="label"><span lang="en">Monthly recurring</span><span lang="es">Mensual recurrente</span></div>
-      <div class="amount">$225 – $340</div>
-      <div class="note"><span lang="en">Internet, phones, licenses, web server — portal not included</span><span lang="es">Internet, teléfonos, licencias, servidor web — portal no incluido</span></div>
+      <div class="amount">$315 – $490</div>
+      <div class="note"><span lang="en">Internet, phones, licenses, web server, Healthie EHR</span><span lang="es">Internet, teléfonos, licencias, servidor web, Healthie EHR</span></div>
     </div>
     <div class="tile">
       <div class="label"><span lang="en">Annual</span><span lang="es">Anual</span></div>
@@ -323,11 +323,11 @@
             <td class="num">1</td><td class="num">$5 – $15</td><td class="num">$5 – $15 <span class="detail" lang="en">$0 for now</span><span class="detail" lang="es">$0 por ahora</span></td>
           </tr>
           <tr>
-            <td><span class="item-name"><span lang="en">Doctors portal</span><span lang="es">Portal médico</span> <span class="pill"><span lang="en">TBD</span><span lang="es">Por definir</span></span></span><span class="detail" lang="en">Placeholder until scope is decided — hosted portal services commonly run $50 – $300/mo; a custom build would be a one-time project cost instead</span><span class="detail" lang="es">Partida reservada hasta definir el alcance — los portales hospedados suelen costar $50 – $300/mes; un desarrollo a la medida sería un costo único de proyecto</span></td>
-            <td class="num">1</td><td class="num"><span lang="en">TBD</span><span lang="es">Por definir</span></td><td class="num"><span lang="en">not included</span><span lang="es">no incluido</span></td>
+            <td><span class="item-name">Healthie EHR <span class="pill" style="background:#eef7f1;color:#2f7d5b"><span lang="en">Selected</span><span lang="es">Elegido</span></span></span><span class="detail" lang="en">EHR + practice management + telehealth + secure client portal in one HIPAA-eligible (BAA) subscription — replaces a separate doctors-portal build. Priced for ~2 clinicians on the Essentials tier (~$49.99/provider) up to a small Group plan; ~17% less billed annually</span><span class="detail" lang="es">EHR + gestión de la práctica + telemedicina + portal seguro del paciente en una sola suscripción elegible para HIPAA (BAA) — sustituye desarrollar un portal aparte. Calculado para ~2 clínicas en el nivel Essentials (~$49.99/proveedor) hasta un plan Group pequeño; ~17% menos con pago anual</span></td>
+            <td class="num"><span lang="en">2 providers</span><span lang="es">2 proveedoras</span></td><td class="num">$45 – $75</td><td class="num">$90 – $150</td>
           </tr>
           <tr class="subtotal">
-            <td><span lang="en">Monthly subtotal (without portal)</span><span lang="es">Subtotal mensual (sin el portal)</span></td><td class="num"></td><td class="num"></td><td class="num">$225 – $340</td>
+            <td><span lang="en">Monthly subtotal (with Healthie EHR)</span><span lang="es">Subtotal mensual (con Healthie EHR)</span></td><td class="num"></td><td class="num"></td><td class="num">$315 – $490</td>
           </tr>
         </tbody>
       </table>
@@ -358,21 +358,21 @@
   <section>
     <h2><span lang="en">Assumptions &amp; Notes</span><span lang="es">Supuestos y notas</span></h2>
     <ul class="notes" lang="en">
-      <li><strong>Year-one ballpark:</strong> roughly <strong>$7,300 – $11,200</strong> all-in (hardware plus 12 months of internet, phones, licenses, and web server), before the portal.</li>
+      <li><strong>Year-one ballpark:</strong> roughly <strong>$8,400 – $13,000</strong> all-in (hardware plus 12 months of internet, phones, licenses, web server, and Healthie EHR).</li>
       <li><strong>Phones — two ways to go.</strong> The simple online route is a cloud phone service alone (~$50 – $100/mo for 5 lines): the practice number rings apps on the desktops and staff cell phones, with an auto-attendant and voicemail-to-email, and no phone hardware to buy. Add the desk phones later only if the front desk wants a physical handset — they plug into the same service.</li>
       <li><strong>Phone vendor &amp; HIPAA:</strong> if voicemail or text messages may contain patient details, pick a phone vendor that will sign a BAA — Zoom Phone and RingCentral offer one; Google Voice is covered only under a Google Workspace agreement. Also register the office address for E911, which VoIP requires.</li>
       <li><strong>Website hosting:</strong> a small Hetzner Cloud instance ($5–15/mo) is deferred for now since the site runs on an existing dummy server — the line just reserves the budget for when it moves to its own box.</li>
-      <li><strong>Doctors portal is the big unknown.</strong> A hosted/subscription portal adds monthly cost; a custom-built one is typically a one-time project in the low thousands and up. Firm this line up once she decides what it needs to do.</li>
+      <li><strong>EHR — Healthie.</strong> Chosen to get the practice running fast: EHR, scheduling, charting, telehealth, payments, and a HIPAA-eligible client portal in one subscription — no separate portal to build. Priced for ~2 clinicians (Essentials up to a small Group plan); confirm the exact tier and sign a BAA before storing PHI.</li>
       <li><strong>If patient health data is involved</strong>, the portal and email setup will need to be HIPAA-eligible (Microsoft 365 supports a BAA; the portal vendor must too). That can affect vendor choice more than price.</li>
       <li><strong>UniFi note:</strong> the Cloud Gateway Ultra's 4 switch ports cover 3 desktops + uplink. If APs — or PoE desk phones — are wired to it too, either use the PoE injectors listed or swap in a small UniFi PoE switch (~$110) and drop the injectors.</li>
       <li>Prices are general US-market estimates before tax/shipping; PR availability may shift hardware prices slightly upward.</li>
     </ul>
     <ul class="notes" lang="es">
-      <li><strong>Estimado del primer año:</strong> aproximadamente <strong>$7,300 – $11,200</strong> en total (equipo más 12 meses de internet, teléfonos, licencias y servidor web), sin contar el portal.</li>
+      <li><strong>Estimado del primer año:</strong> aproximadamente <strong>$8,400 – $13,000</strong> en total (equipo más 12 meses de internet, teléfonos, licencias, servidor web y Healthie EHR).</li>
       <li><strong>Teléfonos — dos rutas.</strong> La ruta simple en línea es solo el servicio de teléfono en la nube (~$50 – $100/mes por 5 líneas): el número de la práctica suena en apps en las computadoras y en los celulares del personal, con contestadora automática y buzón de voz al correo, sin comprar equipo telefónico. Los teléfonos de escritorio se añaden después solo si recepción quiere un auricular físico — se conectan al mismo servicio.</li>
       <li><strong>Proveedor de teléfono y HIPAA:</strong> si el buzón de voz o los mensajes de texto pueden contener información de pacientes, elija un proveedor que firme un BAA — Zoom Phone y RingCentral lo ofrecen; Google Voice solo queda cubierto bajo un acuerdo de Google Workspace. También hay que registrar la dirección de la oficina para E911, requisito de VoIP.</li>
       <li><strong>Hosting del sitio web:</strong> la instancia pequeña de Hetzner Cloud ($5–15/mes) queda diferida por ahora porque el sitio corre en un servidor provisional — la línea solo reserva el presupuesto para cuando pase a su propio servidor.</li>
-      <li><strong>El portal médico es la gran incógnita.</strong> Un portal por suscripción añade costo mensual; uno a la medida suele ser un proyecto de costo único desde unos pocos miles en adelante. Esta línea se afina cuando ella decida qué debe hacer.</li>
+      <li><strong>EHR — Healthie.</strong> Elegido para arrancar rápido: EHR, citas, notas clínicas, telemedicina, pagos y un portal del paciente elegible para HIPAA en una sola suscripción — sin desarrollar un portal aparte. Calculado para ~2 clínicas (Essentials hasta un plan Group pequeño); confirmar el nivel exacto y firmar un BAA antes de almacenar información de pacientes.</li>
       <li><strong>Si hay datos de salud de pacientes</strong>, el portal y el correo deben ser elegibles para HIPAA (Microsoft 365 acepta un BAA; el proveedor del portal también debe hacerlo). Eso puede pesar más en la selección del proveedor que el precio.</li>
       <li><strong>Nota de UniFi:</strong> los 4 puertos del Cloud Gateway Ultra cubren 3 computadoras + el enlace. Si los AP — o teléfonos PoE — también se cablean a él, use los inyectores PoE listados o cambie a un switch UniFi PoE pequeño (~$110) y elimine los inyectores.</li>
       <li>Los precios son estimados generales del mercado de EE. UU., antes de impuestos y envío; la disponibilidad en PR puede subirlos levemente.</li>
