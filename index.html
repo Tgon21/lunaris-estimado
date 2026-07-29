@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Estimado de Costos Tecnológicos — Oficina Pequeña (PR)</title>
-<meta name="description" content="Estimado bilingüe (ES/EN) de costos tecnológicos para una oficina médica de 3 estaciones en Puerto Rico: equipo, red, internet, teléfonos VoIP, Microsoft 365, dominio y portal.">
+<meta name="description" content="Estimado bilingüe (ES/EN) de costos tecnológicos para una oficina médica de 5 estaciones en Puerto Rico: equipo, red, internet, teléfonos VoIP, Microsoft 365, dominio y portal.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%234a3566'/><text x='16' y='22' font-size='15' font-weight='bold' font-family='system-ui' fill='%23fff' text-anchor='middle'>$</text></svg>">
 <style>
@@ -185,18 +185,18 @@
   <div class="eyebrow"><span lang="en">Startup Cost Estimate · Draft</span><span lang="es">Estimado de costos iniciales · Borrador</span></div>
   <h1 lang="en">Small Office Technology Buildout — Puerto Rico</h1>
   <h1 lang="es">Infraestructura tecnológica para oficina pequeña — Puerto Rico</h1>
-  <p class="subtitle" lang="en">Planning estimate for a 3-workstation office: computers and peripherals, UniFi networking, business internet with a static IP, a cloud phone system, Microsoft 365 email with Entra conditional access, a Cloudflare domain, and a placeholder for the doctors portal.</p>
-  <p class="subtitle" lang="es">Estimado de planificación para una oficina de 3 estaciones de trabajo: computadoras y periferales, red UniFi, internet comercial con IP fija, sistema de teléfono en la nube, correo de Microsoft 365 con acceso condicional de Entra, un dominio en Cloudflare y una partida reservada para el portal médico.</p>
+  <p class="subtitle" lang="en">Planning estimate for a 5-workstation office: computers and peripherals, UniFi networking, business internet with a static IP, a cloud phone system, Microsoft 365 email with Entra conditional access, a Cloudflare domain, and a placeholder for the doctors portal.</p>
+  <p class="subtitle" lang="es">Estimado de planificación para una oficina de 5 estaciones de trabajo: computadoras y periferales, red UniFi, internet comercial con IP fija, sistema de teléfono en la nube, correo de Microsoft 365 con acceso condicional de Entra, un dominio en Cloudflare y una partida reservada para el portal médico.</p>
 
   <div class="totals">
     <div class="tile lead">
       <div class="label"><span lang="en">One-time hardware</span><span lang="es">Equipo (pago único)</span></div>
-      <div class="amount">$2,900 – $4,350</div>
+      <div class="amount">$4,600 – $7,150</div>
       <div class="note"><span lang="en">Computers, network gear, peripherals; low end skips desk phones</span><span lang="es">Computadoras, equipo de red, periferales; el mínimo omite teléfonos de escritorio</span></div>
     </div>
     <div class="tile">
       <div class="label"><span lang="en">Monthly recurring</span><span lang="es">Mensual recurrente</span></div>
-      <div class="amount">$195 – $335</div>
+      <div class="amount">$225 – $340</div>
       <div class="note"><span lang="en">Internet, phones, licenses, web server — portal not included</span><span lang="es">Internet, teléfonos, licencias, servidor web — portal no incluido</span></div>
     </div>
     <div class="tile">
@@ -246,15 +246,15 @@
         <tbody>
           <tr>
             <td><span class="item-name"><span lang="en">Desktop computers</span><span lang="es">Computadoras de escritorio</span></span><span class="detail" lang="en">Business-class SFF (Dell OptiPlex / Lenovo ThinkCentre class), Win 11 Pro</span><span class="detail" lang="es">SFF de clase comercial (tipo Dell OptiPlex / Lenovo ThinkCentre), Win 11 Pro</span></td>
-            <td class="num">3</td><td class="num">$650 – $850</td><td class="num">$1,950 – $2,550</td>
+            <td class="num">5</td><td class="num">$650 – $850</td><td class="num">$3,250 – $4,250</td>
           </tr>
           <tr>
             <td><span class="item-name"><span lang="en">Monitors</span><span lang="es">Monitores</span></span><span class="detail" lang="en">24″ 1080p, one per computer</span><span class="detail" lang="es">24″ 1080p, uno por computadora</span></td>
-            <td class="num">3</td><td class="num">$120 – $160</td><td class="num">$360 – $480</td>
+            <td class="num">5</td><td class="num">$120 – $160</td><td class="num">$600 – $800</td>
           </tr>
           <tr>
             <td><span class="item-name"><span lang="en">Keyboard + mouse combos</span><span lang="es">Combos de teclado y ratón</span></span><span class="detail" lang="en">Wired or wireless combo sets</span><span class="detail" lang="es">Juegos alámbricos o inalámbricos</span></td>
-            <td class="num">3</td><td class="num">$30 – $50</td><td class="num">$90 – $150</td>
+            <td class="num">5</td><td class="num">$30 – $50</td><td class="num">$150 – $250</td>
           </tr>
           <tr>
             <td><span class="item-name"><span lang="en">Router / gateway with switch ports</span><span lang="es">Router / gateway con puertos de switch</span></span><span class="detail" lang="en">UniFi Cloud Gateway Ultra — routing, firewall, and 4 built-in switch ports in one box</span><span class="detail" lang="es">UniFi Cloud Gateway Ultra — enrutamiento, firewall y 4 puertos de switch en un solo equipo</span></td>
@@ -270,14 +270,18 @@
           </tr>
           <tr>
             <td><span class="item-name"><span lang="en">VoIP desk phones</span><span lang="es">Teléfonos de escritorio VoIP</span> <span class="pill"><span lang="en">Optional</span><span lang="es">Opcional</span></span></span><span class="detail" lang="en">Yealink T3x / Poly Edge class, one per desk. Skip entirely with a softphone-only setup — the phone system's app runs on the desktops and staff cell phones instead</span><span class="detail" lang="es">Clase Yealink T3x / Poly Edge, uno por escritorio. Se pueden omitir por completo con softphones — la app del sistema telefónico corre en las computadoras y celulares del personal</span></td>
-            <td class="num">3</td><td class="num">$80 – $150</td><td class="num">$240 – $450 <span class="detail" lang="en">$0 if softphone-only</span><span class="detail" lang="es">$0 si es solo softphone</span></td>
+            <td class="num">5</td><td class="num">$80 – $150</td><td class="num">$400 – $750 <span class="detail" lang="en">$0 if softphone-only</span><span class="detail" lang="es">$0 si es solo softphone</span></td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Reception privacy screen</span><span lang="es">Pantalla de privacidad en recepción</span></span><span class="detail" lang="en">Front-desk partition / acrylic divider so waiting patients can't see the monitor or overhear check-in (HIPAA-minded)</span><span class="detail" lang="es">Divisor / mampara de acrílico en recepción para que los pacientes en espera no vean la pantalla ni escuchen el registro (pensado para HIPAA)</span></td>
+            <td class="num">1</td><td class="num">$150 – $350</td><td class="num">$150 – $350</td>
           </tr>
           <tr>
             <td><span class="item-name"><span lang="en">Cabling &amp; misc.</span><span lang="es">Cableado y misceláneos</span></span><span class="detail" lang="en">Ethernet runs, surge protectors, mounts</span><span class="detail" lang="es">Tendido de Ethernet, protectores de voltaje, monturas</span></td>
             <td class="num">—</td><td class="num">—</td><td class="num">$75 – $150</td>
           </tr>
           <tr class="subtotal">
-            <td><span lang="en">Hardware subtotal</span><span lang="es">Subtotal de equipo</span><span class="detail" style="font-weight:400"><span lang="en">Low end assumes the softphone-only route with no desk phones</span><span lang="es">El mínimo asume la ruta de solo softphone, sin teléfonos de escritorio</span></span></td><td class="num"></td><td class="num"></td><td class="num">$2,900 – $4,350</td>
+            <td><span lang="en">Hardware subtotal</span><span lang="es">Subtotal de equipo</span><span class="detail" style="font-weight:400"><span lang="en">Low end assumes the softphone-only route with no desk phones</span><span lang="es">El mínimo asume la ruta de solo softphone, sin teléfonos de escritorio</span></span></td><td class="num"></td><td class="num"></td><td class="num">$4,600 – $7,150</td>
           </tr>
         </tbody>
       </table>
@@ -286,8 +290,8 @@
 
   <section>
     <h2><span lang="en">Monthly Recurring</span><span lang="es">Mensual recurrente</span></h2>
-    <p class="section-note" lang="en">Priced for 3–5 users. Puerto Rico ISP figures are general estimates — actual pricing depends on the address and available providers (Liberty Business is the most common).</p>
-    <p class="section-note" lang="es">Calculado para 3–5 usuarios. Las cifras de internet en Puerto Rico son estimados generales — el precio real depende de la dirección y los proveedores disponibles (Liberty Business es el más común).</p>
+    <p class="section-note" lang="en">Priced for 5 users. Puerto Rico ISP figures are general estimates — actual pricing depends on the address and available providers (Liberty Business is the most common).</p>
+    <p class="section-note" lang="es">Calculado para 5 usuarios. Las cifras de internet en Puerto Rico son estimados generales — el precio real depende de la dirección y los proveedores disponibles (Liberty Business es el más común).</p>
     <div class="table-wrap">
       <table>
         <thead>
@@ -304,15 +308,15 @@
           </tr>
           <tr>
             <td><span class="item-name"><span lang="en">Cloud phone system (VoIP)</span><span lang="es">Sistema de teléfono en la nube (VoIP)</span></span><span class="detail" lang="en">Hosted service with a main practice number, auto-attendant, call routing, and voicemail-to-email — Zoom Phone, RingCentral, or Google Voice (Workspace) class. The simple online-only route: number + apps, no phone hardware at all</span><span class="detail" lang="es">Servicio hospedado con número principal, contestadora automática, enrutamiento de llamadas y buzón de voz al correo — clase Zoom Phone, RingCentral o Google Voice (Workspace). La ruta simple, solo en línea: número + apps, sin equipo telefónico</span></td>
-            <td class="num"><span lang="en">3 lines</span><span lang="es">3 líneas</span></td><td class="num">$10 – $20</td><td class="num">$30 – $60</td>
+            <td class="num"><span lang="en">5 lines</span><span lang="es">5 líneas</span></td><td class="num">$10 – $20</td><td class="num">$50 – $100</td>
           </tr>
           <tr>
             <td><span class="item-name">Microsoft 365 Business Basic</span><span class="detail" lang="en">Outlook mailbox, Teams, OneDrive, web Office — per user</span><span class="detail" lang="es">Buzón de Outlook, Teams, OneDrive, Office web — por usuario</span></td>
-            <td class="num">3 – 5</td><td class="num">$6</td><td class="num">$18 – $30</td>
+            <td class="num">5</td><td class="num">$6</td><td class="num">$30</td>
           </tr>
           <tr>
             <td><span class="item-name">Microsoft Entra ID P1</span><span class="detail" lang="en">Conditional access — per user</span><span class="detail" lang="es">Acceso condicional — por usuario</span></td>
-            <td class="num">3 – 5</td><td class="num">$6</td><td class="num">$18 – $30</td>
+            <td class="num">5</td><td class="num">$6</td><td class="num">$30</td>
           </tr>
           <tr>
             <td><span class="item-name"><span lang="en">Hetzner cloud server (website)</span><span lang="es">Servidor en la nube Hetzner (sitio web)</span> <span class="pill"><span lang="en">Deferred</span><span lang="es">Diferido</span></span></span><span class="detail" lang="en">Small Hetzner Cloud instance (CX22/CX32 class) is plenty for a practice website — running on an existing dummy server for now, so $0 until launch</span><span class="detail" lang="es">Una instancia pequeña de Hetzner Cloud (clase CX22/CX32) sobra para el sitio de la práctica — por ahora corre en un servidor provisional existente, así que $0 hasta el lanzamiento</span></td>
@@ -323,14 +327,14 @@
             <td class="num">1</td><td class="num"><span lang="en">TBD</span><span lang="es">Por definir</span></td><td class="num"><span lang="en">not included</span><span lang="es">no incluido</span></td>
           </tr>
           <tr class="subtotal">
-            <td><span lang="en">Monthly subtotal (without portal)</span><span lang="es">Subtotal mensual (sin el portal)</span></td><td class="num"></td><td class="num"></td><td class="num">$195 – $335</td>
+            <td><span lang="en">Monthly subtotal (without portal)</span><span lang="es">Subtotal mensual (sin el portal)</span></td><td class="num"></td><td class="num"></td><td class="num">$225 – $340</td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="callout">
-      <span lang="en"><strong>Licensing tip:</strong> Microsoft 365 Business Premium ($22/user/mo) already includes Entra ID P1, plus desktop Office apps, Intune device management, and Defender. At 3–5 users that's $66 – $110/mo versus $36 – $60/mo for Basic + P1 — worth the jump if she wants device management and the full Office apps, especially for a medical practice.</span>
-      <span lang="es"><strong>Consejo de licencias:</strong> Microsoft 365 Business Premium ($22/usuario/mes) ya incluye Entra ID P1, más las apps de Office de escritorio, administración de equipos con Intune y Defender. Con 3–5 usuarios son $66 – $110/mes contra $36 – $60/mes de Basic + P1 — vale la pena el salto si ella quiere administración de equipos y el Office completo, sobre todo en una práctica médica.</span>
+      <span lang="en"><strong>Licensing tip:</strong> Microsoft 365 Business Premium ($22/user/mo) already includes Entra ID P1, plus desktop Office apps, Intune device management, and Defender. At 5 users that's $110/mo versus $60/mo for Basic + P1 — worth the jump if she wants device management and the full Office apps, especially for a medical practice.</span>
+      <span lang="es"><strong>Consejo de licencias:</strong> Microsoft 365 Business Premium ($22/usuario/mes) ya incluye Entra ID P1, más las apps de Office de escritorio, administración de equipos con Intune y Defender. Con 5 usuarios son $110/mes contra $60/mes de Basic + P1 — vale la pena el salto si ella quiere administración de equipos y el Office completo, sobre todo en una práctica médica.</span>
     </div>
   </section>
 
@@ -354,8 +358,8 @@
   <section>
     <h2><span lang="en">Assumptions &amp; Notes</span><span lang="es">Supuestos y notas</span></h2>
     <ul class="notes" lang="en">
-      <li><strong>Year-one ballpark:</strong> roughly <strong>$5,200 – $8,400</strong> all-in (hardware plus 12 months of internet, phones, licenses, and web server), before the portal.</li>
-      <li><strong>Phones — two ways to go.</strong> The simple online route is a cloud phone service alone (~$30 – $60/mo for 3 lines): the practice number rings apps on the desktops and staff cell phones, with an auto-attendant and voicemail-to-email, and no phone hardware to buy. Add the desk phones later only if the front desk wants a physical handset — they plug into the same service.</li>
+      <li><strong>Year-one ballpark:</strong> roughly <strong>$7,300 – $11,200</strong> all-in (hardware plus 12 months of internet, phones, licenses, and web server), before the portal.</li>
+      <li><strong>Phones — two ways to go.</strong> The simple online route is a cloud phone service alone (~$50 – $100/mo for 5 lines): the practice number rings apps on the desktops and staff cell phones, with an auto-attendant and voicemail-to-email, and no phone hardware to buy. Add the desk phones later only if the front desk wants a physical handset — they plug into the same service.</li>
       <li><strong>Phone vendor &amp; HIPAA:</strong> if voicemail or text messages may contain patient details, pick a phone vendor that will sign a BAA — Zoom Phone and RingCentral offer one; Google Voice is covered only under a Google Workspace agreement. Also register the office address for E911, which VoIP requires.</li>
       <li><strong>Website hosting:</strong> a small Hetzner Cloud instance ($5–15/mo) is deferred for now since the site runs on an existing dummy server — the line just reserves the budget for when it moves to its own box.</li>
       <li><strong>Doctors portal is the big unknown.</strong> A hosted/subscription portal adds monthly cost; a custom-built one is typically a one-time project in the low thousands and up. Firm this line up once she decides what it needs to do.</li>
@@ -364,8 +368,8 @@
       <li>Prices are general US-market estimates before tax/shipping; PR availability may shift hardware prices slightly upward.</li>
     </ul>
     <ul class="notes" lang="es">
-      <li><strong>Estimado del primer año:</strong> aproximadamente <strong>$5,200 – $8,400</strong> en total (equipo más 12 meses de internet, teléfonos, licencias y servidor web), sin contar el portal.</li>
-      <li><strong>Teléfonos — dos rutas.</strong> La ruta simple en línea es solo el servicio de teléfono en la nube (~$30 – $60/mes por 3 líneas): el número de la práctica suena en apps en las computadoras y en los celulares del personal, con contestadora automática y buzón de voz al correo, sin comprar equipo telefónico. Los teléfonos de escritorio se añaden después solo si recepción quiere un auricular físico — se conectan al mismo servicio.</li>
+      <li><strong>Estimado del primer año:</strong> aproximadamente <strong>$7,300 – $11,200</strong> en total (equipo más 12 meses de internet, teléfonos, licencias y servidor web), sin contar el portal.</li>
+      <li><strong>Teléfonos — dos rutas.</strong> La ruta simple en línea es solo el servicio de teléfono en la nube (~$50 – $100/mes por 5 líneas): el número de la práctica suena en apps en las computadoras y en los celulares del personal, con contestadora automática y buzón de voz al correo, sin comprar equipo telefónico. Los teléfonos de escritorio se añaden después solo si recepción quiere un auricular físico — se conectan al mismo servicio.</li>
       <li><strong>Proveedor de teléfono y HIPAA:</strong> si el buzón de voz o los mensajes de texto pueden contener información de pacientes, elija un proveedor que firme un BAA — Zoom Phone y RingCentral lo ofrecen; Google Voice solo queda cubierto bajo un acuerdo de Google Workspace. También hay que registrar la dirección de la oficina para E911, requisito de VoIP.</li>
       <li><strong>Hosting del sitio web:</strong> la instancia pequeña de Hetzner Cloud ($5–15/mes) queda diferida por ahora porque el sitio corre en un servidor provisional — la línea solo reserva el presupuesto para cuando pase a su propio servidor.</li>
       <li><strong>El portal médico es la gran incógnita.</strong> Un portal por suscripción añade costo mensual; uno a la medida suele ser un proyecto de costo único desde unos pocos miles en adelante. Esta línea se afina cuando ella decida qué debe hacer.</li>
