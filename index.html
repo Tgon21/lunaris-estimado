@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Estimado de Costos Tecnológicos — Oficina Pequeña (PR)</title>
-<meta name="description" content="Estimado bilingüe (ES/EN) de costos tecnológicos para una oficina médica de 5 estaciones en Puerto Rico: equipo, red, internet, teléfonos VoIP, Microsoft 365, dominio y Healthie EHR.">
+<meta name="description" content="Estimado bilingüe (ES/EN) de costos tecnológicos para una oficina médica de 5 estaciones en Puerto Rico: equipo, red, internet, teléfonos VoIP, Microsoft 365, CrowdStrike, dominio y Healthie EHR.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%234a3566'/><text x='16' y='22' font-size='15' font-weight='bold' font-family='system-ui' fill='%23fff' text-anchor='middle'>$</text></svg>">
 <style>
@@ -185,8 +185,8 @@
   <div class="eyebrow"><span lang="en">Startup Cost Estimate · Draft</span><span lang="es">Estimado de costos iniciales · Borrador</span></div>
   <h1 lang="en">Small Office Technology Buildout — Puerto Rico</h1>
   <h1 lang="es">Infraestructura tecnológica para oficina pequeña — Puerto Rico</h1>
-  <p class="subtitle" lang="en">Planning estimate for a 5-workstation office: computers and peripherals, UniFi networking, business internet with a static IP, a cloud phone system, multifunction printers, Microsoft 365 email with Entra conditional access, Cloudflare domains, and Healthie EHR (EHR + client portal).</p>
-  <p class="subtitle" lang="es">Estimado de planificación para una oficina de 5 estaciones de trabajo: computadoras y periferales, red UniFi, internet comercial con IP fija, sistema de teléfono en la nube, impresoras multifuncionales, correo de Microsoft 365 con acceso condicional de Entra, dominios en Cloudflare y Healthie EHR (EHR + portal del paciente).</p>
+  <p class="subtitle" lang="en">Planning estimate for a 5-workstation office: computers and peripherals, UniFi networking, business internet with a static IP, a cloud phone system, multifunction printers, Microsoft 365 email with Entra conditional access, CrowdStrike device security, Cloudflare domains, and Healthie EHR (EHR + client portal).</p>
+  <p class="subtitle" lang="es">Estimado de planificación para una oficina de 5 estaciones de trabajo: computadoras y periferales, red UniFi, internet comercial con IP fija, sistema de teléfono en la nube, impresoras multifuncionales, correo de Microsoft 365 con acceso condicional de Entra, seguridad de dispositivos con CrowdStrike, dominios en Cloudflare y Healthie EHR (EHR + portal del paciente).</p>
 
   <div class="totals">
     <div class="tile lead">
@@ -196,8 +196,8 @@
     </div>
     <div class="tile">
       <div class="label"><span lang="en">Monthly recurring</span><span lang="es">Mensual recurrente</span></div>
-      <div class="amount">$315 – $490</div>
-      <div class="note"><span lang="en">Internet, phones, licenses, web server, Healthie EHR · ≈ $3,780 – $5,880 / yr</span><span lang="es">Internet, teléfonos, licencias, servidor web, Healthie EHR · ≈ $3,780 – $5,880 / año</span></div>
+      <div class="amount">$340 – $535</div>
+      <div class="note"><span lang="en">Internet, phones, licenses, CrowdStrike, web server, Healthie EHR · ≈ $4,080 – $6,420 / yr</span><span lang="es">Internet, teléfonos, licencias, CrowdStrike, servidor web, Healthie EHR · ≈ $4,080 – $6,420 / año</span></div>
     </div>
     <div class="tile">
       <div class="label"><span lang="en">Annual</span><span lang="es">Anual</span></div>
@@ -332,6 +332,10 @@
             <td class="num">5</td><td class="num">$6</td><td class="num">$30</td><td class="num">$360</td>
           </tr>
           <tr>
+            <td><span class="item-name"><span lang="en">CrowdStrike Falcon (device security)</span><span lang="es">CrowdStrike Falcon (seguridad de dispositivos)</span></span><span class="detail" lang="en">Endpoint protection / EDR on each workstation — Falcon Go (~$4.99/device/mo) up to Falcon Pro (~$8.33/device/mo billed annually). Managed antivirus with real detection-and-response, a strong answer for the HIPAA security risk analysis</span><span class="detail" lang="es">Protección de endpoints / EDR en cada estación — Falcon Go (~$4.99/equipo/mes) hasta Falcon Pro (~$8.33/equipo/mes con pago anual). Antivirus administrado con detección y respuesta real, un buen respaldo para el análisis de riesgos de seguridad de HIPAA</span></td>
+            <td class="num">5</td><td class="num">$5 – $9</td><td class="num">$25 – $45</td><td class="num">$300 – $540</td>
+          </tr>
+          <tr>
             <td><span class="item-name"><span lang="en">Hetzner cloud server (website)</span><span lang="es">Servidor en la nube Hetzner (sitio web)</span> <span class="pill"><span lang="en">Deferred</span><span lang="es">Diferido</span></span></span><span class="detail" lang="en">Small Hetzner Cloud instance (CX22/CX32 class) is plenty for a practice website — running on an existing dummy server for now, so $0 until launch</span><span class="detail" lang="es">Una instancia pequeña de Hetzner Cloud (clase CX22/CX32) sobra para el sitio de la práctica — por ahora corre en un servidor provisional existente, así que $0 hasta el lanzamiento</span></td>
             <td class="num">1</td><td class="num">$5 – $15</td><td class="num">$5 – $15 <span class="detail" lang="en">$0 for now</span><span class="detail" lang="es">$0 por ahora</span></td><td class="num">$60 – $180</td>
           </tr>
@@ -340,14 +344,14 @@
             <td class="num"><span lang="en">2 providers</span><span lang="es">2 proveedoras</span></td><td class="num">$45 – $75</td><td class="num">$90 – $150</td><td class="num">$1,080 – $1,800</td>
           </tr>
           <tr class="subtotal">
-            <td><span lang="en">Monthly subtotal (with Healthie EHR)</span><span lang="es">Subtotal mensual (con Healthie EHR)</span></td><td class="num"></td><td class="num"></td><td class="num">$315 – $490</td><td class="num">$3,780 – $5,880</td>
+            <td><span lang="en">Monthly subtotal (with Healthie EHR)</span><span lang="es">Subtotal mensual (con Healthie EHR)</span></td><td class="num"></td><td class="num"></td><td class="num">$340 – $535</td><td class="num">$4,080 – $6,420</td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="callout">
-      <span lang="en"><strong>Licensing tip:</strong> Microsoft 365 Business Premium ($22/user/mo) already includes Entra ID P1, plus desktop Office apps, Intune device management, and Defender. At 5 users that's $110/mo versus $60/mo for Basic + P1 — worth the jump if she wants device management and the full Office apps, especially for a medical practice.</span>
-      <span lang="es"><strong>Consejo de licencias:</strong> Microsoft 365 Business Premium ($22/usuario/mes) ya incluye Entra ID P1, más las apps de Office de escritorio, administración de equipos con Intune y Defender. Con 5 usuarios son $110/mes contra $60/mes de Basic + P1 — vale la pena el salto si ella quiere administración de equipos y el Office completo, sobre todo en una práctica médica.</span>
+      <span lang="en"><strong>Licensing tip:</strong> Microsoft 365 Business Premium ($22/user/mo) already includes Entra ID P1, plus desktop Office apps, Intune device management, and Defender. At 5 users that's $110/mo versus $60/mo for Basic + P1 — worth the jump if she wants device management and the full Office apps, especially for a medical practice. With CrowdStrike budgeted as the antivirus/EDR layer, Premium's Defender simply stays off — the two shouldn't run together.</span>
+      <span lang="es"><strong>Consejo de licencias:</strong> Microsoft 365 Business Premium ($22/usuario/mes) ya incluye Entra ID P1, más las apps de Office de escritorio, administración de equipos con Intune y Defender. Con 5 usuarios son $110/mes contra $60/mes de Basic + P1 — vale la pena el salto si ella quiere administración de equipos y el Office completo, sobre todo en una práctica médica. Con CrowdStrike presupuestado como la capa de antivirus/EDR, el Defender de Premium simplemente se deja apagado — no deben correr juntos.</span>
     </div>
   </section>
 
@@ -376,9 +380,107 @@
   </section>
 
   <section>
+    <h2><span lang="en">HIPAA compliance checklist</span><span lang="es">Lista de cumplimiento HIPAA</span></h2>
+    <p class="section-note" lang="en">How the Security Rule's safeguards map onto this budget. <span style="color:#2f7d5b;font-weight:600">In budget</span> = a priced line item above covers it · <span style="color:var(--accent);font-weight:600">Included</span> = it comes free with something already budgeted · <span style="color:var(--warn);font-weight:600">Task · $0</span> = paperwork or setup work, no purchase needed. Plain-language planning guide, not legal advice — the formal risk analysis below is the document an auditor asks for.</p>
+    <p class="section-note" lang="es">Cómo las salvaguardas de la Regla de Seguridad se cubren con este presupuesto. <span style="color:#2f7d5b;font-weight:600">En presupuesto</span> = lo cubre una partida con precio arriba · <span style="color:var(--accent);font-weight:600">Incluido</span> = viene gratis con algo ya presupuestado · <span style="color:var(--warn);font-weight:600">Tarea · $0</span> = trámite o configuración, sin compra. Guía de planificación en lenguaje llano, no asesoría legal — el análisis de riesgos formal de abajo es el documento que pide un auditor.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th><span lang="en">Safeguard</span><span lang="es">Salvaguarda</span></th><th><span lang="en">How it's achieved</span><span lang="es">Cómo se logra</span></th><th class="num"><span lang="en">Status</span><span lang="es">Estado</span></th></tr>
+        </thead>
+        <tbody>
+          <tr class="subtotal">
+            <td colspan="3"><span lang="en">Administrative safeguards</span><span lang="es">Salvaguardas administrativas</span></td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Security risk analysis</span><span lang="es">Análisis de riesgos de seguridad</span></span><span class="detail" lang="en">Written analysis of where patient data lives and what could go wrong — required, and the first thing an auditor asks for. Repeat yearly</span><span class="detail" lang="es">Análisis escrito de dónde viven los datos de pacientes y qué podría fallar — obligatorio, y lo primero que pide un auditor. Se repite cada año</span></td>
+            <td><span class="detail" style="margin-top:0"><span lang="en">Done in-house with HHS's free Security Risk Assessment (SRA) tool</span><span lang="es">Se hace internamente con la herramienta gratuita SRA de HHS</span></span></td>
+            <td class="num"><span class="pill" style="margin-left:0"><span lang="en">Task · $0</span><span lang="es">Tarea · $0</span></span></td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Business Associate Agreements (BAAs)</span><span lang="es">Acuerdos de Asociado de Negocio (BAA)</span></span><span class="detail" lang="en">A signed BAA with every vendor that touches patient data</span><span class="detail" lang="es">Un BAA firmado con cada proveedor que toca datos de pacientes</span></td>
+            <td><span class="detail" style="margin-top:0"><span lang="en">Microsoft 365, Healthie, and the phone vendor (Zoom/RingCentral) all sign BAAs — request each one during account setup. CrowdStrike doesn't hold patient data, so no BAA needed there</span><span lang="es">Microsoft 365, Healthie y el proveedor de teléfono (Zoom/RingCentral) firman BAAs — solicitar cada uno al crear la cuenta. CrowdStrike no guarda datos de pacientes, así que ahí no hace falta</span></span></td>
+            <td class="num"><span class="pill" style="margin-left:0"><span lang="en">Task · $0</span><span lang="es">Tarea · $0</span></span></td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Workforce HIPAA training</span><span lang="es">Adiestramiento HIPAA del personal</span></span><span class="detail" lang="en">Every staff member trained on handling patient data, repeated yearly and documented</span><span class="detail" lang="es">Todo el personal adiestrado en el manejo de datos de pacientes, cada año y documentado</span></td>
+            <td><span class="detail" style="margin-top:0"><span lang="en">Free HHS/CMS training materials, or a low-cost online course (~$20–$30/person/yr)</span><span lang="es">Materiales gratuitos de HHS/CMS, o un curso en línea económico (~$20–$30/persona/año)</span></span></td>
+            <td class="num"><span class="pill" style="margin-left:0"><span lang="en">Task · $0</span><span lang="es">Tarea · $0</span></span></td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Written policies &amp; breach plan</span><span lang="es">Políticas escritas y plan de brechas</span></span><span class="detail" lang="en">Security policies, sanction policy, and a breach-notification plan on paper before an incident</span><span class="detail" lang="es">Políticas de seguridad, política de sanciones y un plan de notificación de brechas por escrito antes de un incidente</span></td>
+            <td><span class="detail" style="margin-top:0"><span lang="en">Adapted from small-practice templates in-house</span><span lang="es">Adaptadas internamente de plantillas para prácticas pequeñas</span></span></td>
+            <td class="num"><span class="pill" style="margin-left:0"><span lang="en">Task · $0</span><span lang="es">Tarea · $0</span></span></td>
+          </tr>
+          <tr class="subtotal">
+            <td colspan="3"><span lang="en">Physical safeguards</span><span lang="es">Salvaguardas físicas</span></td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Reception privacy</span><span lang="es">Privacidad en recepción</span></span><span class="detail" lang="en">Waiting patients can't see screens or overhear check-in</span><span class="detail" lang="es">Los pacientes en espera no ven pantallas ni escuchan el registro</span></td>
+            <td><span class="detail" style="margin-top:0"><span lang="en"><strong>Reception privacy screen</strong> in the hardware budget, plus monitors angled away from the waiting area</span><span lang="es"><strong>Pantalla de privacidad en recepción</strong> del presupuesto de equipo, más monitores orientados lejos de la sala de espera</span></span></td>
+            <td class="num"><span class="pill" style="margin-left:0;background:#eef7f1;color:#2f7d5b"><span lang="en">In budget</span><span lang="es">En presupuesto</span></span></td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Workstation auto-lock</span><span lang="es">Bloqueo automático de estaciones</span></span><span class="detail" lang="en">Screens lock after a few idle minutes; each person signs in as themselves</span><span class="detail" lang="es">Las pantallas se bloquean tras unos minutos sin uso; cada persona entra con su propia cuenta</span></td>
+            <td><span class="detail" style="margin-top:0"><span lang="en">Windows 11 Pro policy on the budgeted desktops (Intune-managed if she takes the Business Premium route)</span><span lang="es">Política de Windows 11 Pro en las computadoras presupuestadas (administrada por Intune si toma la ruta Business Premium)</span></span></td>
+            <td class="num"><span class="pill" style="margin-left:0;background:var(--accent-soft);color:var(--accent)"><span lang="en">Included</span><span lang="es">Incluido</span></span></td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Power protection &amp; availability</span><span lang="es">Protección de energía y disponibilidad</span></span><span class="detail" lang="en">Records stay reachable and hardware isn't corrupted by PR's outages</span><span class="detail" lang="es">Los expedientes siguen accesibles y el equipo no se daña con los apagones de PR</span></td>
+            <td><span class="detail" style="margin-top:0"><span lang="en"><strong>UPS battery backups</strong> in the hardware budget for the network stack and key desktops</span><span lang="es"><strong>Baterías de respaldo (UPS)</strong> del presupuesto de equipo para la red y las computadoras clave</span></span></td>
+            <td class="num"><span class="pill" style="margin-left:0;background:#eef7f1;color:#2f7d5b"><span lang="en">In budget</span><span lang="es">En presupuesto</span></span></td>
+          </tr>
+          <tr class="subtotal">
+            <td colspan="3"><span lang="en">Technical safeguards</span><span lang="es">Salvaguardas técnicas</span></td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Unique accounts, MFA &amp; access control</span><span lang="es">Cuentas únicas, MFA y control de acceso</span></span><span class="detail" lang="en">One account per person, multi-factor sign-in, access limited to what each role needs</span><span class="detail" lang="es">Una cuenta por persona, inicio de sesión multifactor, acceso limitado a lo que cada rol necesita</span></td>
+            <td><span class="detail" style="margin-top:0"><span lang="en"><strong>Microsoft 365 Business Basic + Entra ID P1</strong> in the monthly budget — per-user accounts with MFA and conditional access</span><span lang="es"><strong>Microsoft 365 Business Basic + Entra ID P1</strong> del presupuesto mensual — cuentas por usuario con MFA y acceso condicional</span></span></td>
+            <td class="num"><span class="pill" style="margin-left:0;background:#eef7f1;color:#2f7d5b"><span lang="en">In budget</span><span lang="es">En presupuesto</span></span></td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Antivirus / endpoint protection</span><span lang="es">Antivirus / protección de endpoints</span></span><span class="detail" lang="en">Malware and ransomware protection with detection-and-response on every workstation</span><span class="detail" lang="es">Protección contra malware y ransomware con detección y respuesta en cada estación</span></td>
+            <td><span class="detail" style="margin-top:0"><span lang="en"><strong>CrowdStrike Falcon</strong> in the monthly budget — one sensor per desktop</span><span lang="es"><strong>CrowdStrike Falcon</strong> del presupuesto mensual — un sensor por computadora</span></span></td>
+            <td class="num"><span class="pill" style="margin-left:0;background:#eef7f1;color:#2f7d5b"><span lang="en">In budget</span><span lang="es">En presupuesto</span></span></td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Full-disk encryption</span><span lang="es">Cifrado de disco completo</span></span><span class="detail" lang="en">A stolen computer doesn't become a reportable breach if the disk is encrypted</span><span class="detail" lang="es">Una computadora robada no se convierte en una brecha reportable si el disco está cifrado</span></td>
+            <td><span class="detail" style="margin-top:0"><span lang="en">BitLocker, included with Windows 11 Pro on the budgeted desktops — just turn it on during setup</span><span lang="es">BitLocker, incluido con Windows 11 Pro en las computadoras presupuestadas — solo hay que activarlo al configurarlas</span></span></td>
+            <td class="num"><span class="pill" style="margin-left:0;background:var(--accent-soft);color:var(--accent)"><span lang="en">Included</span><span lang="es">Incluido</span></span></td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Firewall &amp; separate guest Wi-Fi</span><span lang="es">Firewall y Wi-Fi de invitados separado</span></span><span class="detail" lang="en">Patient/guest Wi-Fi never touches the network the practice computers are on</span><span class="detail" lang="es">El Wi-Fi de pacientes/invitados nunca toca la red de las computadoras de la práctica</span></td>
+            <td><span class="detail" style="margin-top:0"><span lang="en"><strong>UniFi Cloud Gateway + access points</strong> in the hardware budget — firewall plus an isolated guest VLAN, configured once</span><span lang="es"><strong>UniFi Cloud Gateway + puntos de acceso</strong> del presupuesto de equipo — firewall más una VLAN de invitados aislada, configurada una vez</span></span></td>
+            <td class="num"><span class="pill" style="margin-left:0;background:#eef7f1;color:#2f7d5b"><span lang="en">In budget</span><span lang="es">En presupuesto</span></span></td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Secure patient communication</span><span lang="es">Comunicación segura con pacientes</span></span><span class="detail" lang="en">Patient data moves through encrypted, BAA-covered channels — never plain web forms or personal texting</span><span class="detail" lang="es">Los datos de pacientes viajan por canales cifrados y cubiertos por BAA — nunca formularios web simples ni mensajes personales</span></td>
+            <td><span class="detail" style="margin-top:0"><span lang="en"><strong>Healthie</strong> patient portal + <strong>Microsoft 365</strong> mail in the monthly budget, both under BAA</span><span lang="es">Portal del paciente de <strong>Healthie</strong> + correo de <strong>Microsoft 365</strong> del presupuesto mensual, ambos bajo BAA</span></span></td>
+            <td class="num"><span class="pill" style="margin-left:0;background:#eef7f1;color:#2f7d5b"><span lang="en">In budget</span><span lang="es">En presupuesto</span></span></td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Backups &amp; recovery</span><span lang="es">Respaldos y recuperación</span></span><span class="detail" lang="en">Patient records survive a dead computer, ransomware, or a hurricane</span><span class="detail" lang="es">Los expedientes sobreviven una computadora dañada, ransomware o un huracán</span></td>
+            <td><span class="detail" style="margin-top:0"><span lang="en">Healthie is cloud-hosted with its own backups; office files live in OneDrive/SharePoint, included with M365 — verify retention settings during setup</span><span lang="es">Healthie corre en la nube con sus propios respaldos; los archivos de la oficina viven en OneDrive/SharePoint, incluidos con M365 — verificar la retención al configurar</span></span></td>
+            <td class="num"><span class="pill" style="margin-left:0;background:var(--accent-soft);color:var(--accent)"><span lang="en">Included</span><span lang="es">Incluido</span></span></td>
+          </tr>
+          <tr>
+            <td><span class="item-name"><span lang="en">Audit logs</span><span lang="es">Registros de auditoría</span></span><span class="detail" lang="en">A record of who looked at what, and when</span><span class="detail" lang="es">Un registro de quién vio qué, y cuándo</span></td>
+            <td><span class="detail" style="margin-top:0"><span lang="en">Healthie access logs + Entra sign-in logs, both part of services already budgeted</span><span lang="es">Registros de acceso de Healthie + registros de inicio de sesión de Entra, ambos parte de servicios ya presupuestados</span></span></td>
+            <td class="num"><span class="pill" style="margin-left:0;background:var(--accent-soft);color:var(--accent)"><span lang="en">Included</span><span lang="es">Incluido</span></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <span lang="en"><strong>Bottom line:</strong> every safeguard that costs money is already a line item in this budget — CrowdStrike, Entra MFA, the UniFi firewall, UPS units, the privacy screen, and the BAA-covered subscriptions. What remains is unpaid work: the risk analysis, signing the BAAs, staff training, and written policies.</span>
+      <span lang="es"><strong>En resumen:</strong> cada salvaguarda que cuesta dinero ya es una partida de este presupuesto — CrowdStrike, MFA de Entra, el firewall UniFi, las UPS, la pantalla de privacidad y las suscripciones cubiertas por BAA. Lo que queda es trabajo sin costo: el análisis de riesgos, firmar los BAAs, el adiestramiento del personal y las políticas escritas.</span>
+    </div>
+  </section>
+
+  <section>
     <h2><span lang="en">Assumptions &amp; Notes</span><span lang="es">Supuestos y notas</span></h2>
     <ul class="notes" lang="en">
-      <li><strong>Year-one ballpark:</strong> roughly <strong>$9,650 – $15,200</strong> all-in (hardware plus 12 months of internet, phones, licenses, web server, and Healthie EHR).</li>
+      <li><strong>Year-one ballpark:</strong> roughly <strong>$9,950 – $15,750</strong> all-in (hardware plus 12 months of internet, phones, licenses, CrowdStrike, web server, and Healthie EHR).</li>
       <li><strong>Phones — two ways to go.</strong> The simple online route is a cloud phone service alone (~$50 – $100/mo for 5 lines): the practice number rings apps on the desktops and staff cell phones, with an auto-attendant and voicemail-to-email, and no phone hardware to buy. Add the desk phones later only if the front desk wants a physical handset — they plug into the same service.</li>
       <li><strong>Phone vendor &amp; HIPAA:</strong> if voicemail or text messages may contain patient details, pick a phone vendor that will sign a BAA — Zoom Phone and RingCentral offer one; Google Voice is covered only under a Google Workspace agreement. Also register the office address for E911, which VoIP requires.</li>
       <li><strong>Website hosting:</strong> a small Hetzner Cloud instance ($5–15/mo) is deferred for now since the site runs on an existing dummy server — the line just reserves the budget for when it moves to its own box.</li>
@@ -390,7 +492,7 @@
       <li>Prices are general US-market estimates before tax/shipping; PR availability may shift hardware prices slightly upward.</li>
     </ul>
     <ul class="notes" lang="es">
-      <li><strong>Estimado del primer año:</strong> aproximadamente <strong>$9,650 – $15,200</strong> en total (equipo más 12 meses de internet, teléfonos, licencias, servidor web y Healthie EHR).</li>
+      <li><strong>Estimado del primer año:</strong> aproximadamente <strong>$9,950 – $15,750</strong> en total (equipo más 12 meses de internet, teléfonos, licencias, CrowdStrike, servidor web y Healthie EHR).</li>
       <li><strong>Teléfonos — dos rutas.</strong> La ruta simple en línea es solo el servicio de teléfono en la nube (~$50 – $100/mes por 5 líneas): el número de la práctica suena en apps en las computadoras y en los celulares del personal, con contestadora automática y buzón de voz al correo, sin comprar equipo telefónico. Los teléfonos de escritorio se añaden después solo si recepción quiere un auricular físico — se conectan al mismo servicio.</li>
       <li><strong>Proveedor de teléfono y HIPAA:</strong> si el buzón de voz o los mensajes de texto pueden contener información de pacientes, elija un proveedor que firme un BAA — Zoom Phone y RingCentral lo ofrecen; Google Voice solo queda cubierto bajo un acuerdo de Google Workspace. También hay que registrar la dirección de la oficina para E911, requisito de VoIP.</li>
       <li><strong>Hosting del sitio web:</strong> la instancia pequeña de Hetzner Cloud ($5–15/mes) queda diferida por ahora porque el sitio corre en un servidor provisional — la línea solo reserva el presupuesto para cuando pase a su propio servidor.</li>
